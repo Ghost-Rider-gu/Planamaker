@@ -2,9 +2,10 @@
   "name": "planamaker",
   "version": "1.0.0",
   "description": "Build your own plan for education, career and so on",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "dev": "tsc -w"
+    "dev": "webpack-dev-server",
+    "build": "webpack --config webpack.prod.config.js"
   },
   "author": "Iurii Golubnichenko aka Ghost Rider",
   "license": "ISC",
@@ -15,6 +16,7 @@
     "pug": "^3.0.2"
   },
   "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
     "ts-loader": "^9.4.4",
     "typescript": "^5.2.2",
     "webpack": "^5.88.2",

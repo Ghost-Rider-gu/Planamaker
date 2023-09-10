@@ -4,8 +4,11 @@
   "description": "Build your own plan for education, career and so on",
   "main": "app.js",
   "scripts": {
-    "dev": "webpack-dev-server",
-    "build": "webpack --config webpack.prod.config.js"
+    "dev": "npm-run-all --parallel dev-webpack dev-node",
+    "dev-webpack": "webpack-dev-server",
+    "dev-node": "nodemon dist/bundle.js",
+    "production-build": "webpack --config webpack.prod.config.js",
+    "production": "node dist/bundle.js"
   },
   "author": "Iurii Golubnichenko aka Ghost Rider",
   "license": "ISC",
@@ -17,6 +20,7 @@
   },
   "devDependencies": {
     "clean-webpack-plugin": "^4.0.0",
+    "nodemon": "^3.0.1",
     "ts-loader": "^9.4.4",
     "typescript": "^5.2.2",
     "webpack": "^5.88.2",

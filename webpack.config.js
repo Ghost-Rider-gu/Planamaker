@@ -2,9 +2,10 @@ const path = require('path');
 
 module.exports = {
     mode: 'development',
+    target: 'node',
     entry: './src/app.ts',
     output: {
-        filename: 'bundle.[contenthash].js',
+        filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
         publicPath: 'dist'
     },

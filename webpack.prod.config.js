@@ -3,13 +3,13 @@ const CleanPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     mode: 'production',
+    target: 'node',
     entry: './src/app.ts',
     output: {
-        filename: 'bundle.[contenthash].js',
+        filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
         publicPath: 'dist'
     },
-    devtool: 'none',
     module: {
         rules: [
             {
